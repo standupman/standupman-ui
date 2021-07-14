@@ -5,6 +5,10 @@
 
 # Gallery
 
+### Dashboard Landing
+<img src="static/previews/dashboard-landing.png">
+
+
 # Stack
 StandUpMan UI is constructed using [svelte](#) and [svelte-kit](#).
 

@@ -54,7 +54,7 @@ body {
       rgb(229, 229, 229),
       rgba(229, 229, 229, 0.9)
     ),
-    url(../images/bg-illustration.svg);
+    url(/bg-illustration.svg);
   background-color: var(--color-light-gray);
   background-size: contain;
   background-repeat: no-repeat;
