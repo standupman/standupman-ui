@@ -1,0 +1,1896 @@
+/* ============== Imports ======================= */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+
+/* ============== Variables ============== */
+:root {
+  --color-white: #fff;
+  --color-white-2: #fcfcfc;
+  --color-white-3: #f8f8f8;
+  --color-light-gray: rgb(229, 229, 229);
+  --color-light-gray-2: #f2f2f2;
+  --color-light-blue: #a6c1d3;
+  --color-light-blue-2: #7d9eb5;
+  --color-light-blue-3: #dce4f3;
+  --color-red: #eb5757;
+  --color-orange: #f39325;
+  --color-yellow: #f2c94c;
+  --color-light-yellow: #fcffe8;
+  --color-green: #52d88a;
+  --color-light-green: #e9ffec;
+  --color-gray: #828282;
+  --color-gray-2: #e0e0e0;
+  --color-gray-3: #4f4f4f;
+  --color-gray-4: #c4c4c4;
+  --color-gray-5: #bdbdbd;
+  --color-dark: #1e2630;
+  --color-blue: #2d2f7b;
+  --color-light-pink: #f9f4ff;
+  --color-violet: #623d91;
+  --color-light-violet: #fdf0ff;
+  --font-family: "Mulish", sans-serif;
+}
+
+/* ============== Base Styles ==================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: 16px;
+  background: linear-gradient(
+      to right,
+      rgb(229, 229, 229),
+      rgba(229, 229, 229, 0.9)
+    ),
+    url(../images/bg-illustration.svg);
+  background-color: var(--color-light-gray);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  background-position: 100% 11rem;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+/* ============== End of Base Styles ==================== */
+
+/* ============ Utilies =========== */
+.icon-left i,
+.icon-left img {
+  padding-right: 1rem;
+  vertical-align: middle;
+}
+.icon-right i,
+.icon-right img {
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+
+.text-primary {
+  color: var(--color-violet);
+}
+
+.text-success {
+  color: var(--color-green);
+}
+
+.text-danger {
+  color: var(--color-red);
+}
+
+.text-gray {
+  color: var(--color-gray);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.text-dark {
+  color: var(--color-dark);
+}
+
+.bg-primary {
+  background-color: var(--color-violet);
+  color: var(--color-white);
+}
+.text-blue {
+  color: var(--color-light-blue-2);
+}
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+.u-margin-bottom-large {
+  margin-bottom: 4rem;
+}
+.u-margin-top-extra-small {
+  margin-top: 1rem;
+}
+.u-margin-top-large {
+  margin-top: 4rem;
+}
+.u-padding-bottom-large {
+  padding-bottom: 4rem;
+}
+.u-padding-bottom-small {
+  padding-bottom: 2rem;
+}
+.u-padding-left-medium {
+  padding-left: 4rem;
+}
+.u-vertical-align {
+  vertical-align: center;
+}
+/* ============ End of Utilies =========== */
+
+/* ================= General Form Styles  ============== */
+form {
+  display: grid;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label {
+  padding-bottom: 1rem;
+}
+
+.form-group i {
+  position: absolute;
+  top: 1rem;
+}
+
+.form-group .icon-right {
+  right: 1rem;
+}
+.form-group .icon-left {
+  left: 1rem;
+}
+input,
+textarea,
+select {
+  padding: 1rem;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+  font-family: var(--font-family);
+}
+
+::placeholder {
+  font-family: var(--font-family);
+}
+
+.form-submit-btn {
+  border: 1px solid var(--color-violet);
+  color: var(--color-violet);
+  background: rgba(98, 61, 145, 0.2);
+  cursor: pointer;
+}
+
+.input-with-icon-form-group,
+.input-with-link-form-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+}
+
+.input-with-link-form-group {
+  justify-content: space-between;
+}
+
+.input-with-link-form-group a {
+  padding-right: 1rem;
+}
+
+.input-with-icon-form-group input,
+.input-with-link-form-group input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
+.input-with-icon-form-group i {
+  padding-left: 1rem;
+  color: var(--color-violet);
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-group-row > div {
+  width: 49%;
+}
+/* ================= End of General Form Styles ============== */
+
+/* ======= Button Styles ============ */
+.btn,
+.btn:active,
+.btn:visited {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-weight: 300;
+}
+
+.primary-btn {
+  background-color: var(--color-violet);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  color: var(--color-white);
+}
+.secondary-btn {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+.btn-danger {
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
+.btn-dark {
+  color: var(--color-white);
+  background-color: var(--color-gray-3);
+  border: 1px solid var(--color-red);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--color-violet);
+  border-radius: 4px;
+  background-color: var(--color-light-violet);
+  color: var(--color-violet);
+}
+/* ============ End of Button Styles =========== */
+/* ================ Start Of Badge Pill Styles =========== */
+.badge-pill {
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  border-radius: 60px;
+  color: var(--color-white);
+  font-size: 14px;
+}
+
+.badge-pill-danger {
+  background-color: var(--color-red);
+}
+
+.badge-pill-secondary {
+  background-color: var(--color-yellow);
+}
+
+.badge-pill-active {
+  color: var(--color-green);
+  background-color: rgba(82, 216, 138, 0.277);
+}
+
+/* ===== General Page Styles ===== */
+main {
+  width: 100%;
+  position: relative;
+}
+
+.main-dashboard-content {
+  position: absolute;
+  left: 20%;
+  width: 80%;
+  top: 13rem;
+  padding-bottom: 8rem;
+  transition: all 0.3s;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  width: 97%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.breadcrumb > * {
+  padding-right: 1rem;
+}
+
+.breadcrumb-item {
+  font-weight: 700;
+  font-size: 20px;
+}
+/* End of Breadcrumb */
+
+/* ================ Start of Sidebar Styles ==================== */
+.sidebar {
+  width: 20%;
+  height: auto;
+  background-color: var(--color-white-2);
+  padding: 0 5rem 2rem 2rem;
+  transition: all 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  box-shadow: 4px -2px 6px -4px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid var(--color-violet);
+}
+/* To hide sidebar */
+.hide-sidebar {
+  left: -20%;
+}
+
+.sidebar .logo-box {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-white-2);
+}
+
+.sidebar .logo-box .logo {
+  width: 90%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.sidebar-links-container {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.sidebar-links-group {
+  margin-bottom: 2rem;
+}
+
+.sidebar-links-group:not(:last-of-type) {
+  border-bottom: 0.5px solid var(--color-violet);
+}
+
+.sidebar-links-group .heading {
+  padding-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+.sidebar-links-group ul > * {
+  padding-bottom: 2rem;
+}
+
+.sidebar-links-group ul li a:hover {
+  color: var(--color-blue);
+}
+
+.sidebar-logout-btn {
+  display: inline-block;
+  margin-top: 8rem;
+}
+
+/* ============ End of Side Bar Styles =============== */
+/* ===== User Dropdown Menu ======= */
+.user-details-dropdown {
+  position: fixed;
+  right: 0;
+  width: 20%;
+  height: 30rem;
+  background-color: var(--color-violet);
+  padding-top: 4rem;
+  transition: all 0.5s;
+  top: 10rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-white);
+  text-align: center;
+  box-shadow: 2px 10px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.hide-user-details-dropdown {
+  top: -31rem;
+}
+
+.user-details-dropdown .user-avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.user-details-dropdown .user-avatar img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-details-dropdown .user-name {
+  font-size: 23px;
+}
+
+.user-details-dropdown-cta-btns {
+  padding: 2rem 0;
+  position: absolute;
+  background-color: var(--color-white);
+  bottom: 0;
+  width: 100%;
+}
+
+.user-details-dropdown-cta-btns .secondary-btn {
+  color: var(--color-dark);
+  margin-right: 1rem;
+}
+/* =============== End of  User Dropdown menu styles ================ */
+
+/* ======= Header Styles ================ */
+header {
+  width: 80%;
+  position: fixed;
+  top: 0;
+  left: 20%;
+  background-color: var(--color-white-2);
+  transition: all 0.3s;
+  box-shadow: 2px 10px 6px -4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+}
+/* Increase Main Dashboard content and Header widths  when Sidebar is hidden */
+.increase-width {
+  width: 100%;
+  left: 0%;
+}
+
+.header-items-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-items-container-1 {
+  width: 55%;
+}
+.header-items-container-1 > * {
+  margin-right: 1rem;
+}
+
+.sidebar-toggle-icon {
+  cursor: pointer;
+}
+.sidebar-toggle-icon span {
+  display: inline-block;
+  width: 2.5rem;
+  height: 3px;
+  background-color: var(--color-dark);
+  position: relative;
+  top: 1rem;
+}
+
+.sidebar-toggle-icon span::before,
+.sidebar-toggle-icon span::after {
+  content: "";
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark);
+}
+
+.sidebar-toggle-icon span::before {
+  top: -0.8rem;
+}
+.sidebar-toggle-icon span::after {
+  top: 0.8rem;
+}
+
+.header-items-container-1 .form-group {
+  width: 50%;
+  position: relative;
+}
+.header-items-container-1 .form-group i {
+  position: absolute;
+  right: 1rem;
+  color: var(--color-gray);
+  top: 1.5rem;
+}
+
+.header-search-input {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray);
+  padding: 1.3rem 1rem;
+}
+
+.header-items-container-2 {
+  width: auto;
+  justify-content: flex-end;
+}
+
+.user-cta-icons {
+  display: flex;
+  align-items: center;
+  width: auto;
+  font-size: 20px;
+}
+
+.user-cta-icons a {
+  position: relative;
+}
+
+.number-of-notifications {
+  position: absolute;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  top: -1rem;
+  right: -1rem;
+  font-size: 10px;
+  color: var(--color-white);
+}
+
+.user-cta-icons > * {
+  margin-right: 3rem;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar-container {
+  width: 6rem;
+  height: 6rem;
+  border: 3px solid var(--color-violet);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.user-avatar-container img {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+}
+
+.user-details .user-name {
+  font-weight: 700;
+}
+
+.user-details .user-job-title {
+  font-weight: 400;
+  font-size: 16px;
+}
+/* ======= End of Header Styles ================ */
+
+/* =============== All Standups Page Styles ========== */
+.all-standups-container {
+  background-color: var(--color-white);
+  width: 97%;
+  margin: 3rem auto 5rem auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.all-standups-container .header > p {
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.all-standups-container .header {
+  background-color: var(--color-violet);
+  padding: 2rem 4rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.all-standups-container .table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+}
+
+.all-standups-container .table-header form {
+  display: flex;
+  width: 50%;
+}
+
+.all-standups-container .table-header form .form-group {
+  width: 65%;
+}
+
+.all-standups-container .table-header form input {
+  width: 98%;
+  margin-right: 2%;
+  padding: 1.2rem 1rem;
+}
+
+.all-standups-container .table-header form .form-group i {
+  position: absolute;
+  right: 2rem;
+  top: 1.4rem;
+  color: var(--color-gray);
+}
+
+.all-standups-container .table-header form input,
+.all-standups-container .table-header form select {
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+}
+
+.all-standups-container .table-header form select {
+  background-color: var(--color-gray-2);
+  font-family: var(--font-family);
+  color: var(--color-gray-3);
+}
+
+/* All standups table */
+.standups-table {
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+  padding: 0 4rem;
+}
+
+.standups-table tr {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  padding: 0rem 1rem;
+  height: auto;
+}
+
+.standups-table thead tr {
+  background-color: var(--color-violet);
+  height: 5rem !important;
+}
+
+.standups-table thead tr td {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  padding: 0 0 0 1rem;
+  font-weight: 500;
+}
+
+.standups-table thead tr td:not(:last-of-type) {
+  border-right: 1px solid var(--color-white);
+}
+
+.standups-table tbody tr td {
+  padding: 2rem 1rem;
+}
+.standups-table tbody tr td i {
+  font-size: 20px;
+  padding-right: 1rem;
+}
+
+.standups-table tbody tr:nth-child(even) {
+  background-color: var(--color-light-pink);
+}
+/* End of All stand up table */
+
+/* All stand up table footer */
+.all-standups-container .footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+.all-standups-container .footer div {
+  display: flex;
+  align-items: center;
+}
+
+.all-standups-container .footer div > * {
+  margin-right: 1.3rem;
+}
+
+.all-standups-container .footer-item-1 {
+  width: auto;
+}
+.all-standups-container .footer-item-1 select {
+  border-color: var(--color-light-blue-2);
+  border-radius: 4px;
+  font-family: var(--font-family);
+  padding: 1rem;
+}
+
+.all-standups-container .pagination {
+  width: auto;
+}
+
+.all-standups-container .pagination .pagination-item {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.all-standups-container .pagination .pagination-item-active {
+  padding: 0.7rem 1.3rem;
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  border-radius: 4px;
+}
+/* ================= End of All Standups Page Styles ================*/
+/* ================== Start of Add new Standup Page styles ========== */
+.add-new-standup-container {
+  width: 98%;
+  margin: 2rem auto;
+  background-color: var(--color-white);
+  padding-bottom: 4rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.add-new-standup-container .header {
+  background-color: var(--color-violet);
+  padding: 2rem 4rem;
+  border-radius: 20px 20px 0 0;
+}
+
+.add-new-standup-container .header p {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.add-new-standup-container .new-standup {
+  width: 92%;
+  margin: 0 auto;
+  padding: 4rem 0 2.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-violet);
+}
+
+.new-standup .standup-form {
+  width: 48%;
+  margin-bottom: 2rem;
+}
+
+.new-standup .standup-form textarea {
+  resize: none;
+  height: 7rem;
+}
+
+.new-standup .schedule {
+  background-color: var(--color-light-gray);
+  padding: 1rem;
+  width: 48%;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.new-standup .schedule .schedule-inputs-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.schedule .schedule-inputs-container .form-group {
+  width: 33%;
+}
+
+/*Start Questions and Add Question Form Section */
+.questions-and-new-question-form-container {
+  padding: 4rem;
+  background: var(--color-light-gray);
+  width: 92%;
+  margin: 4rem auto;
+  border-radius: 16px;
+}
+
+.questions-container {
+  background-color: var(--color-white);
+  margin-top: 2rem;
+}
+.questions-container ul {
+  width: 100%;
+}
+
+.questions-and-new-question-form-container .question-form {
+  background: var(--color-white);
+  transition: all 0.5s;
+  height: auto;
+}
+.questions-and-new-question-form-container .question-form .form-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-light-blue);
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-form .form-header img {
+  cursor: pointer;
+}
+.hide {
+  height: 0;
+  display: none;
+}
+.questions-and-new-question-form-container .question-form .form-body {
+  padding: 4rem;
+}
+
+.action-button-container {
+  padding-left: 4%;
+}
+
+.action-button-container .btn {
+  margin-right: 1rem;
+}
+/* End Questions and Add Question Form Section */
+
+/* ================== Start of Profile Page  Styles ========== */
+/* Profile Page Hero Section Styles */
+.user-profile-container {
+  width: 100%;
+  position: relative;
+}
+
+.hero-section {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(
+    to right,
+    rgba(98, 61, 145),
+    rgba(98, 61, 145)
+  );
+  position: relative;
+  margin-top: -3rem;
+  padding: 4rem 2rem;
+  color: var(--color-white);
+  overflow: hidden;
+}
+.hero-section .bg-img {
+  position: absolute;
+  transform: scale(0.8);
+  z-index: 0;
+}
+
+.bg-img-1 {
+  right: 20rem;
+  top: 0;
+}
+.bg-img-2 {
+  right: -2.6rem;
+  top: -2.6rem;
+}
+
+.hero-section .logout-btn {
+  position: absolute;
+  right: 2rem;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border: 1px solid var(--color-white);
+  padding: 0.5rem 2rem;
+}
+.hero-section .user-info {
+  padding: 2rem 0;
+}
+.hero-section .user-info .user-avatar-container {
+  border-color: var(--color-white);
+  width: 8rem;
+  height: 8rem;
+}
+
+.hero-section .user-info .user-name {
+  font-size: 30px;
+}
+
+.hero-section .user-info .social-media-links-container {
+  padding-left: 2rem;
+  position: relative;
+  top: -1rem;
+}
+
+.user-info .social-media-links-container .social-media-link-item {
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: var(--color-white);
+}
+
+.hero-section .user-numbers {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-white);
+  display: flex;
+}
+
+.hero-section .user-numbers .user-numbers-item {
+  margin-right: 2rem;
+  text-align: center;
+}
+
+.user-numbers .user-numbers-item p:first-of-type {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.user-numbers .user-numbers-item p:last-of-type {
+  font-size: 20px;
+  text-align: right;
+  color: var(--color-white-3);
+  font-weight: 200;
+  opacity: 0.7;
+}
+/* End of Profile Page Hero Section Styles */
+
+/* Start of Profile Page Notes Section  */
+.notes-and-activity-section {
+  width: 97%;
+  margin: 4rem auto;
+}
+
+.notes-and-activity-section .notes-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.notes-and-activity-section .notes-container .notes {
+  width: 48%;
+}
+
+.notes-and-activity-section .notes-container .notes .notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes-and-activity-section .notes-container .notes .notes-header .btn {
+  padding: 0.6rem 1rem;
+}
+
+.notes-and-activity-section .notes-container .notes .notes-header p {
+  color: var(--color-violet);
+  font-weight: 600;
+  font-size: 18px;
+}
+.notes-and-activity-section .notes-container .notes .notes-body {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--color-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+  border: 1px solid var(--color-light-blue-3);
+  border-radius: 6px;
+  padding: 2rem;
+}
+
+.notes-container .notes .notes-body ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.notes-body ul li > p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notes .notes-body ul li input {
+  display: none;
+}
+
+.notes-body ul li label span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-gray-4);
+  transition: all 0.5s;
+  margin-right: 1rem;
+}
+.notes-body ul li label span i {
+  font-size: 10px;
+}
+.notes-body ul li label input:checked ~ span {
+  background-color: var(--color-green);
+  border-color: var(--color-green);
+  text-align: center;
+}
+/* End of Profile Page Notes Section */
+
+/* Start of Profile Page Activity Section */
+.activity-container {
+  width: 43%;
+  height: auto;
+  margin-top: -5rem;
+}
+
+.activity-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-container .header p {
+  color: var(--color-violet);
+  font-weight: 600;
+}
+
+.activity-container .header .btn {
+  font-size: 12px;
+  padding: 0.7rem;
+}
+
+.past-activities-container {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+.past-activities-container .activity {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31%;
+  height: 13rem;
+  padding: 1rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  border: 1px solid var(--color-light-blue-3);
+  color: --color-dark;
+}
+
+.past-activities-container .activity .cta-icons {
+  align-self: flex-end;
+}
+
+.activity .cta-icons a {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  text-align: center;
+  padding-top: 0.4rem;
+  border: 1px solid var(--color-light-blue-3);
+}
+
+.activity .cta-icons a:first-of-type {
+  background-color: var(--color-white);
+}
+.activity .cta-icons a:last-of-type {
+  background-color: var(--color-light-blue-3);
+}
+
+.past-activities-container .activity p:first-of-type {
+  font-size: 30px;
+}
+.past-activities-container .activity p:last-of-type {
+  font-size: 14px;
+}
+
+.past-activities-container .tasks-completed {
+  background-color: var(--color-light-green);
+}
+.past-activities-container .tasks-planned {
+  background-color: var(--color-light-yellow);
+}
+.past-activities-container .tasks-reported {
+  background-color: var(--color-light-violet);
+}
+/* End of Profile Page Activity Section */
+/*================ End of Profile Page Styles ================*/
+
+/* ================= Start Of Fill Standup Page Styles ========== */
+.fill-standup-container {
+  width: 97%;
+  margin: 3rem auto 0 auto;
+  background-color: var(--color-white);
+  border-radius: 20px 20px 0 0;
+}
+
+.fill-standup-container .header {
+  width: 100%;
+  padding: 2rem 4rem;
+  background-color: var(--color-violet);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.fill-standup-container .header img {
+  transform: scale(0.6);
+}
+
+.fill-standup-inner-container {
+  padding: 4rem 4rem;
+}
+
+/* Start of Fill Standup Page Progress Bar Styles */
+.fill-standup-inner-container .progress-bar {
+  width: 98%;
+  height: 0.6rem;
+  background-color: var(--color-gray-5);
+  position: relative;
+}
+.fill-standup-inner-container .progress-bar .progress-bar-inner {
+  width: 26%;
+  height: 0.6rem;
+  background-color: var(--color-violet);
+}
+
+.progress-step {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-gray-5);
+  color: var(--color-white);
+  position: absolute;
+  top: -1.3rem;
+  border-radius: 50%;
+}
+
+.tasks-completed-step {
+  background-color: var(--color-violet);
+}
+
+.progress-step-2 {
+  left: 25%;
+}
+.progress-step-3 {
+  left: 50%;
+}
+.progress-step-4 {
+  left: 75%;
+}
+.progress-step-5 {
+  right: -0.2%;
+}
+/* End of Fill Standup Page Progress Bar Styles */
+/* Start of Fill Standup Form Container */
+.answer-form-container {
+  padding-top: 5rem;
+}
+
+.answer-form-container .question {
+  font-size: 30px;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.answer-form {
+  width: 100%;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 8px;
+}
+.answer-form .menu {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  padding: 1rem 2rem 0 2rem;
+}
+.answer-form .menu:last-of-type {
+  background-color: var(--color-light-gray-2);
+}
+.answer-form .menu div {
+  display: flex;
+  align-items: center;
+}
+.active-menu-item {
+  background-color: var(--color-light-gray-2);
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+}
+
+.answer-form .menu div > * {
+  display: inline-block;
+  margin-right: 1.4rem;
+}
+
+.answer-form form textarea {
+  border: none;
+  resize: none;
+  height: 20rem;
+  padding: 1rem 4rem;
+  outline: none;
+}
+
+ .navigation-btns {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+/* End of Fill Standup Form Container */
+/* ================ End of Fill Standup Page Styles ============== */
+
+/*================= Start of Authentication Pages Styles ===================*/
+.authentification-page {
+  width: 100%;
+  display: flex;
+}
+
+.authentication-page-illustration-img-container,
+.authentication-form-container {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authentication-page-illustration-img-container {
+  background-color: var(--color-violet);
+  justify-content: center;
+}
+
+.authentication-page-illustration-img-container img {
+  max-width: 70%;
+  width: 70%;
+}
+
+.authentication-page-illustration-img-container .welcome-message {
+  color: var(--color-white);
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.welcome-message p:first-of-type {
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.welcome-message p:last-of-type {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.authentication-form-container {
+  background-color: var(--color-white);
+}
+
+.authentication-form-container .logo-box {
+  padding: 5% 0;
+}
+
+.authentication-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.authentication-form p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 3rem;
+}
+
+.authentication-form input[type="submit"] {
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  border-color: var(--color-violet);
+  cursor: pointer;
+}
+
+.signin-with-google-link {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.signin-with-google-link img {
+  padding-right: 1rem;
+}
+/*================= End of Authentication Pages Styles ===================*/
+
+/* ================= Start Of Billing Page Styles ======================= */
+.user-billing-container {
+  width: 100%;
+  position: relative;
+}
+
+.billing-details-container {
+  width: 97%;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+.billing-details-container .billing-details-item {
+  background-color: var(--color-white);
+  padding: 3rem;
+}
+
+.billing-details-item .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.billing-details-item .header .btn:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.billing-details-item .header p {
+  color: var(--color-violet);
+  font-weight: 700;
+}
+
+.billing-details-item table {
+  width: auto;
+}
+
+.billing-details-item table thead tr {
+  color: #babfc5;
+  font-weight: 400;
+}
+
+.billing-details-item table tr {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  padding-bottom: 1rem;
+}
+
+.billing-address table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.saved-payment-methods table {
+  width: 100%;
+}
+.saved-payment-methods table tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* ================= End Of Billing Page Styles ======================= */
+
+/* ================ Start of Settings Page Styles ===================== */
+.settings-container {
+  width: 97%;
+  margin: 3rem auto 0 auto;
+  background-color: var(--color-white);
+  border-radius: 20px 20px 0 0;
+}
+
+.settings-container .header {
+  width: 100%;
+  padding: 2rem 4rem;
+  background-color: var(--color-violet);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.settings-inner-container {
+  width: 70%;
+  margin: 6rem auto 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Start of Update Profile Details form styles */
+.update-profile-details-form {
+  width: 50%;
+}
+
+.update-profile-details-form > * {
+  margin-bottom: 2rem;
+}
+
+.update-profile-details-form input[type="submit"] {
+  background-color: var(--color-violet);
+  border-color: var(--color-violet);
+  color: var(--color-white);
+  width: 10rem;
+  margin-bottom: 5rem;
+}
+/* End of Update Profile Details form styles */
+/* Start of Update Profile Picture Container Styles */
+.update-profile-picture-container {
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );
+    overflow: hidden;
+  background-size: contain;
+  align-self: flex-start;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.update-profile-picture-container img {
+  width: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  position: absolute;
+  filter: brightness(60%);
+  z-index: 0;
+}
+.update-profile-picture-container a {
+  color: var(--color-white);
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+  z-index: 2;
+}
+
+.update-profile-picture-container a i {
+  font-size: 50px;
+}
+
+/* ============== Start of  Dashboard Home Page Styles =========== */
+/* Welcome message */
+.welcome-message-container {
+  width: 97%;
+  margin: 0 auto;
+  /* padding-bottom: 3rem; */
+}
+
+.welcome-message-container p:first-of-type {
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.welcome-message-container p span {
+  font-weight: 800;
+}
+
+.welcome-message-container p:last-of-type {
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 0.5rem;
+}
+
+.home-page-main-container {
+  width: 97%;
+  margin: 4rem auto;
+}
+
+.page-links-and-stats-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.page-links-container {
+  width: 55%;
+}
+
+.page-link-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+.page-link-card-row:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+.page-link-card {
+  width: 48%;
+  background-color: var(--color-green);
+  padding: 2rem;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 16px;
+  height: auto;
+}
+
+.page-link-card img {
+  width: 25%;
+  max-width: 50%;
+  object-fit: contain;
+  display: inline-block;
+  padding: 10rem 0 1rem 0;
+}
+
+.create-standup-link-card {
+  background-color: var(--color-light-green);
+}
+.all-standups-link-card {
+  background-color: #fff8f0;
+}
+.my-standups-link-card {
+  background-color: #f5f6ff;
+}
+.my-profile-link-card {
+  background-color: #fcffe8;
+}
+
+.settings-link-card {
+  width: 100%;
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 2rem;
+  font-size: 25px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.settings-link-card img {
+  transform: scale(0.6);
+  padding-right: 1rem;
+}
+
+.some-stats-container {
+  width: 40%;
+  background-color: var(--color-white);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+}
+
+.some-stats-container > p {
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+.stats-card {
+  border: 1px solid rgba(98, 61, 145, 0.5);
+  border-radius: 14px;
+  padding: 3rem;
+}
+
+.stats-card:not(:last-of-type) {
+    margin-bottom: 3rem;
+}
+
+.stats-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-card .body {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+/* Progress Rings Styles */
+.filled-progress-circle,
+.created-progress-circle {
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--color-gray-4);
+  overflow: hidden;
+}
+
+.filled-progress-circle {
+  height: 20rem;
+  width: 20rem;
+}
+
+.created-progress-circle {
+  height: 60%;
+  width: 60%;
+  z-index: 120;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.filled-progress-circle::before,
+.created-progress-circle::before {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  content: "";
+  display: table;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  z-index: 10;
+}
+.filled-progress-circle::after {
+  background-color: var(--color-violet);
+  content: "";
+  display: table;
+  position: absolute;
+  top: 0%;
+  left: -40%;
+  width: 100%;
+  height: 100%;
+}
+.created-progress-circle::after {
+  background-color: var(--color-blue);
+  content: "";
+  display: table;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+}
+/* End of progress ring styles */
+
+.progress-infos {
+  margin-left: 3rem;
+}
+
+.progress-infos > div {
+  display: flex;
+}
+
+.progress-infos > div > div p:first-of-type {
+  font-weight: 400;
+  font-size: 19px;
+  color: var(--color-gray);
+}
+
+
+.progress-infos > div > div p:last-of-type {
+  font-weight: 400;
+  font-weight: 600;
+  font-size: 36.1242px;
+  line-height: 45px;
+}
+
+.progress-infos .color-indicator {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.color-indicator-1 {
+  background-color: var(--color-violet);
+}
+.color-indicator-2 {
+  background-color: var(--color-blue);
+}
+
+/* ============= Start of Recent Standups Table container styles ======== */
+
+.recent-standups-table-container {
+    margin-top: 3rem;
+}
+
+.recent-standups-table-container  .standups-table {
+    padding: 0;
+} 
+
+.recent-standups-table-container .header {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 1rem;
+}
+.recent-standups-table-container .header p {
+ font-weight: bold;
+font-size: 23px;
+}
+/* ============== End of  Dashboard Home Page Styles =========== */
+/* ============== Start of Final Step for Fill standups styles ========== */
+.fill-standup-inner-container .final-step-illustrations {
+  /* width: 60%; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.final-step-illustrations  img {
+  transform: scale(.9);
+  width: auto;
+  max-width: 40%;
+}
+
+.fill-standup-inner-container .final-step-message {
+  text-align: center;
+}
+
+.final-step-message p:first-of-type {
+  font-weight: bold;
+  font-size: 30px;
+}
+.final-step-message p:last-of-type {
+  font-weight: normal;
+  font-size: 25px;
+}
+
+/* ====== Dashboard Landing Page ============ */
+.dashboard-landing-page {
+  width: 100%;
+  background: var(--color-white);
+}
+
+.dashboard-landing-page .header {
+  text-align: center;
+  padding: 3rem;
+}
+
+.dashboard-landing-page .header img {
+  max-width: 30%;
+  width: 20%;
+}
+
+.dashboard-landing-page .main-content {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-content .text-container {
+  width: 30%;
+}
+.main-content .text-container > p:first-of-type{
+ color: var(--color-violet);
+ text-transform: uppercase;
+ letter-spacing: 2.7px;
+ padding-bottom: 2rem;
+ font-weight: 600;
+}
+
+.main-content .text-container > p:last-of-type {
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 2rem;
+}
+
+.main-content .text-container a {
+  font-size: 20px;
+}
+
+.main-content .text-container .cta-btns {
+  width: 100%;
+}
+
+.main-content .text-container .cta-btns > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content .text-container .cta-btns > div a {
+  width: 48%;
+  text-align: center;
+}
+
+.main-content .text-container .cta-btns p {
+  padding: 3rem 0;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content .text-container .cta-btns .btn-outline-primary {
+  border: 3px solid var(--color-violet);
+  background-color: transparent;
+  font-weight: 400;
+}
+
+.text-container .cta-btns p::before,
+.text-container .cta-btns p::after {
+  content: "";
+  width: 44%;
+  height: 1px;
+  background-color: var(--color-dark);
+  display: table;
+}
+
+.signup-with-google-btn {
+  background-color: transparent;
+  border: 3px solid var(--color-light-blue);
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.main-content  .illustration-container {
+  width: 50%;
+}
+
+ .illustration-container img {
+   max-width: 100%;
+   width: 100%;
+ }
+/* Dashbaoard landing page footer */
+.dashboard-landing-footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  margin-top: 5rem;
+  border-top: 1px solid var(--color-gray-4);
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ font-size: 20px;
+}
+
+.dashboard-landing-footer .logo-box {
+  width: 20%;
+}
+.dashboard-landing-footer .logo-box img {
+  width: 80%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.dashboard-landing-footer .social-media-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(97, 61, 145, 0.151);
+  border-radius: 50%;
+  color: var(--color-violet);
+}
+
+/*=================== Reports Page Styles ================ */
+.reports-container .standups-table tr {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1.2fr .7fr;
+  padding: 0rem 1rem;
+  height: auto;
+}
+
+.reports-container ul li {
+  list-style-type: disc;
+} 
