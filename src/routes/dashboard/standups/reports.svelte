@@ -38,7 +38,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>Nfebe Noel</td>
+          <td>Fon E. Noel</td>
           <td>
             <ul>
                 <li>Seven kids code</li>
@@ -69,7 +69,7 @@
           </td>
         </tr>
         <tr>
-          <td>Nfebe Noel</td>
+          <td>Fon E. Noel</td>
           <td>
             <ul>
                 <li>Seven kids code</li>
@@ -100,7 +100,7 @@
           </td>
         </tr>
         <tr>
-          <td>Nfebe Noel</td>
+          <td>Fon E. Noel</td>
           <td>
             <ul>
                 <li>Seven kids code</li>
@@ -131,7 +131,7 @@
           </td>
         </tr>
         <tr>
-          <td>Nfebe Noel</td>
+          <td>Fon E. Noel</td>
           <td>
             <ul>
                 <li>Seven kids code</li>

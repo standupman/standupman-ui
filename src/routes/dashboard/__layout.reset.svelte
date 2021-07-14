@@ -38,7 +38,7 @@
 			<img src="/user-img.jpg" alt="" />
 		  </div>
 		  <div class="user-details">
-			<p class="user-name">Nfebe Noel</p>
+			<p class="user-name">Fon E. Noel</p>
 			<p class="user-job-title">Software Engineer</p>
 		  </div>
 		</div>
@@ -51,12 +51,12 @@
 		<img src="/user-img.jpg" alt="" />
 	  </div>
 	  <div class="user-details">
-		<p class="user-name">Nfebe Noel</p>
+		<p class="user-name">Fon E. Noel</p>
 		<p>Admin User</p>
 	  </div>
 
 	  <div class="user-details-dropdown-cta-btns">
-		<a href="/dashboard/account" class="btn secondary-btn icon-left"
+		<a href="/dashboard/" class="btn secondary-btn icon-left"
 		  ><i class="fas fa-cog"></i> Settings</a
 		>
 		<a href="#" class="btn btn-danger icon-left"
