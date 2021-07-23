@@ -1,0 +1,432 @@
+/* ============== Imports ======================= */
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css");
+
+:root {
+  --color-white: #fff;
+  --color-light-gray: rgb(229, 229, 229);
+  --color-light-gray-2: #f2f2f2;
+  --color-light-blue: #a6c1d3;
+  --color-light-yellow: #fcffe8;
+  --color-gray: #828282;
+  --color-gray-2: #e0e0e0;
+  --color-gray-3: #4f4f4f;
+  --color-gray-4: #c4c4c4;
+  --color-gray-5: #bdbdbd;
+  --color-dark: #1e2630;
+  --color-blue: #2d2f7b;
+  --color-light-pink: #f9f4ff;
+  --color-violet: #623d91;
+  --color-light-violet: #fdf0ff;
+  --font-family: "Mulish", sans-serif;
+}
+
+/* ============== Base Styles ==================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: var(--font-family);
+  height: 100vh;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+/* ============ Utilies =========== */
+.icon-left i,
+.icon-left img {
+  padding-right: 1rem;
+  vertical-align: middle;
+}
+.icon-right i,
+.icon-right img {
+  padding-left: 1rem;
+  vertical-align: middle;
+}
+
+.text-primary {
+  color: var(--color-violet);
+}
+
+
+.u-margin-bottom-small {
+  margin-bottom: 2rem;
+}
+.u-margin-bottom-large {
+  margin-bottom: 4rem;
+}
+.u-margin-top-extra-small {
+  margin-top: 1rem;
+}
+.u-margin-top-large {
+  margin-top: 4rem;
+}
+.u-padding-bottom-large {
+  padding-bottom: 4rem;
+}
+.u-padding-bottom-small {
+  padding-bottom: 2rem;
+}
+.u-padding-left-medium {
+  padding-left: 4rem;
+}
+/* ============== End of Utility Styles ============= */
+
+/* ======= Button Styles ============ */
+.btn,
+.btn:active,
+.btn:visited {
+  padding: 1rem 2rem;
+  border: none;
+  background-color: transparent;
+  border-radius: 8px;
+  font-weight: 300;
+}
+
+.primary-btn {
+  background-color: var(--color-violet);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+  color: var(--color-white);
+}
+.secondary-btn {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+.btn-danger {
+  color: var(--color-white);
+  background-color: var(--color-red);
+  border: 1px solid var(--color-red);
+}
+.btn-dark {
+  color: var(--color-white);
+  background-color: var(--color-gray-3);
+  border: 1px solid var(--color-red);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--color-violet);
+  border-radius: 4px;
+  background-color: var(--color-light-violet);
+  color: var(--color-violet);
+}
+/* ============ End of Button Styles =========== */
+
+/* ================= General Form Styles  ============== */
+form {
+  display: grid;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label {
+  padding-bottom: 1rem;
+}
+
+.form-group i {
+  position: absolute;
+  top: 1rem;
+}
+
+.form-group .icon-right {
+  right: 1rem;
+}
+.form-group .icon-left {
+  left: 1rem;
+}
+input,
+textarea,
+select {
+  padding: 1rem;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+  font-family: var(--font-family);
+}
+
+::placeholder {
+  font-family: var(--font-family);
+}
+
+.form-submit-btn {
+  border: 1px solid var(--color-violet);
+  color: var(--color-violet);
+  background: rgba(98, 61, 145, 0.2);
+  cursor: pointer;
+}
+
+.input-with-icon-form-group,
+.input-with-link-form-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+}
+
+.input-with-link-form-group {
+  justify-content: space-between;
+}
+
+.input-with-link-form-group a {
+  padding-right: 1rem;
+}
+
+.input-with-icon-form-group input,
+.input-with-link-form-group input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+
+.input-with-icon-form-group i {
+  padding-left: 1rem;
+  color: var(--color-violet);
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-group-row > div {
+  width: 49%;
+}
+/* ================= End of General Form Styles ============== */
+
+/*================= Start of Authentication Pages Styles ===================*/
+.authentification-page {
+  width: 100%;
+  display: flex;
+}
+
+.authentication-page-illustration-img-container,
+.authentication-form-container {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authentication-page-illustration-img-container {
+  background-color: var(--color-violet);
+  justify-content: center;
+}
+
+.authentication-page-illustration-img-container img {
+  max-width: 70%;
+  width: 70%;
+}
+
+.authentication-page-illustration-img-container .welcome-message {
+  color: var(--color-white);
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.welcome-message p:first-of-type {
+  font-size: 45px;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+.welcome-message p:last-of-type {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.authentication-form-container {
+  background-color: var(--color-white);
+}
+
+.authentication-form-container .logo-box {
+  padding: 5% 0;
+}
+
+.authentication-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.authentication-form p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 3rem;
+}
+
+.authentication-form input[type="submit"] {
+  background-color: var(--color-violet);
+  color: var(--color-white);
+  border-color: var(--color-violet);
+  cursor: pointer;
+}
+
+.signin-with-google-link {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-light-blue);
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.signin-with-google-link img {
+  padding-right: 1rem;
+}
+/*================= End of Authentication Pages Styles ===================*/
+
+/* ====== Dashboard Landing Page ============ */
+.dashboard-landing-page .header {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.dashboard-landing-page .header img {
+  max-width: 30%;
+  width: 15%;
+}
+
+.dashboard-landing-page .main-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-content .text-container {
+  width: 30%;
+}
+
+.main-content .text-container > p:first-of-type{
+ color: var(--color-violet);
+ text-transform: uppercase;
+ letter-spacing: 2.7px;
+ padding-bottom: 1.5rem;
+ font-weight: 600;
+}
+
+.main-content .text-container > p:last-of-type {
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 1.5rem;
+}
+
+.main-content .text-container a {
+  font-size: 20px;
+}
+
+.main-content .text-container .cta-btns {
+  width: 100%;
+}
+
+.main-content .text-container .cta-btns > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content .text-container .cta-btns > div a {
+  width: 48%;
+  text-align: center;
+}
+
+.main-content .text-container .cta-btns p {
+  padding: 2.5rem 0;
+  width: 100%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-content .text-container .cta-btns .btn-outline-primary {
+  border: 3px solid var(--color-violet);
+  background-color: transparent;
+  font-weight: 400;
+}
+
+.text-container .cta-btns p::before,
+.text-container .cta-btns p::after {
+  content: "";
+  width: 44%;
+  height: 1px;
+  background-color: var(--color-dark);
+  display: table;
+}
+
+.signup-with-google-btn {
+  background-color: transparent;
+  border: 3px solid var(--color-light-blue);
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.main-content  .illustration-container {
+  width: 50%;
+}
+
+ .illustration-container img {
+   max-width: 100%;
+   width: 100%;
+ }
+/* Dashbaoard landing page footer */
+.dashboard-landing-footer {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid var(--color-gray-4);
+  display: flex;
+  justify-content: space-between;
+ align-items: center;
+ font-size: 20px;
+}
+
+.dashboard-landing-footer .logo-box {
+  width: 20%;
+}
+.dashboard-landing-footer .logo-box img {
+  width: 70%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.dashboard-landing-footer .social-media-links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(97, 61, 145, 0.151);
+  border-radius: 50%;
+  color: var(--color-violet);
+}

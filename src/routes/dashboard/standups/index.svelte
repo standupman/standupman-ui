@@ -13,7 +13,7 @@
       <form action="">
         <div class="form-group">
           <input type="text" placeholder="Search customer" />
-          <img src="./assets/images/icons/icon-search.svg" alt="" />
+          <img src="/icons/icon-search.svg" alt="" />
         </div>
         <select name="" id="">
           <option value="">All Frequency</option>
@@ -21,7 +21,7 @@
       </form>
       <div>
         <a class="btn primary-btn icon-left centralize-vertically" href="add-new-standup.html"
-          ><img src="./assets/images/icons/icon-plus.svg" alt="" /> Add a
+          ><img src="/icons/icon-plus.svg" alt="" /> Add a
           standup</a
         >
       </div>
@@ -49,33 +49,13 @@
           <td>Daily</td>
           <td>
             <a href="">
-              <img src="./assets/images/icons/icon-pencil.svg" alt="" />
+              <img src="/icons/icon-pencil.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-trash.svg" alt="" />
+              <img src="/icons/icon-trash.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-check.svg" alt="" />
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>GPS Daily</td>
-          <td>
-            Et tellus dictum lacinia pellentesque eu diam. Suspendisse
-            aliquam eu, montes, purus morbi. Enim vel.
-          </td>
-          <td>12 pm</td>
-          <td>Daily</td>
-          <td>
-            <a href="">
-              <img src="./assets/images/icons/icon-pencil.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./assets/images/icons/icon-trash.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./assets/images/icons/icon-check.svg" alt="" />
+              <img src="/icons/icon-check.svg" alt="" />
             </a>
           </td>
         </tr>
@@ -89,33 +69,13 @@
           <td>Daily</td>
           <td>
             <a href="">
-              <img src="./assets/images/icons/icon-pencil.svg" alt="" />
+              <img src="/icons/icon-pencil.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-trash.svg" alt="" />
+              <img src="/icons/icon-trash.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-check.svg" alt="" />
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td>GPS Daily</td>
-          <td>
-            Et tellus dictum lacinia pellentesque eu diam. Suspendisse
-            aliquam eu, montes, purus morbi. Enim vel.
-          </td>
-          <td>12 pm</td>
-          <td>Daily</td>
-          <td>
-            <a href="">
-              <img src="./assets/images/icons/icon-pencil.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./assets/images/icons/icon-trash.svg" alt="" />
-            </a>
-            <a href="">
-              <img src="./assets/images/icons/icon-check.svg" alt="" />
+              <img src="/icons/icon-check.svg" alt="" />
             </a>
           </td>
         </tr>
@@ -129,13 +89,13 @@
           <td>Daily</td>
           <td>
             <a href="">
-              <img src="./assets/images/icons/icon-pencil.svg" alt="" />
+              <img src="/icons/icon-pencil.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-trash.svg" alt="" />
+              <img src="/icons/icon-trash.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-check.svg" alt="" />
+              <img src="/icons/icon-check.svg" alt="" />
             </a>
           </td>
         </tr>
@@ -149,13 +109,53 @@
           <td>Daily</td>
           <td>
             <a href="">
-              <img src="./assets/images/icons/icon-pencil.svg" alt="" />
+              <img src="/icons/icon-pencil.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-trash.svg" alt="" />
+              <img src="/icons/icon-trash.svg" alt="" />
             </a>
             <a href="">
-              <img src="./assets/images/icons/icon-check.svg" alt="" />
+              <img src="/icons/icon-check.svg" alt="" />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>GPS Daily</td>
+          <td>
+            Et tellus dictum lacinia pellentesque eu diam. Suspendisse
+            aliquam eu, montes, purus morbi. Enim vel.
+          </td>
+          <td>12 pm</td>
+          <td>Daily</td>
+          <td>
+            <a href="">
+              <img src="/icons/icon-pencil.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/icons/icon-trash.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/icons/icon-check.svg" alt="" />
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>GPS Daily</td>
+          <td>
+            Et tellus dictum lacinia pellentesque eu diam. Suspendisse
+            aliquam eu, montes, purus morbi. Enim vel.
+          </td>
+          <td>12 pm</td>
+          <td>Daily</td>
+          <td>
+            <a href="">
+              <img src="/icons/icon-pencil.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/icons/icon-trash.svg" alt="" />
+            </a>
+            <a href="">
+              <img src="/icons/icon-check.svg" alt="" />
             </a>
           </td>
         </tr>
@@ -176,13 +176,13 @@
             </p>
         </div>
         <div class="footer-item-2 pagination">
-          <p><a href="#" class="pagination-item text-blue"><img src="./assets/images/icons/icon-arrow-left.svg" alt=""> Prev</a></p>
+          <p><a href="#" class="pagination-item text-blue"><img src="/icons/icon-arrow-left.svg" alt=""> Prev</a></p>
           <p><a href="" class="pagination-item pagination-item-active">1</a></p>
           <p><a href="" class="pagination-item">2</a></p>
           <p><a href="" class="pagination-item">3</a></p>
           <p ><a href="" class="pagination-item">4</a></p>
           <p><a href="" class="pagination-item">5</a></p>
-          <p><a href="#" class="pagination-item">Next <img src="./assets/images/icons/icon-arrow-right.svg" alt=""></a></p>
+          <p><a href="#" class="pagination-item">Next <img src="/icons/icon-arrow-right.svg" alt=""></a></p>
         </div>
     </div>
   </div>

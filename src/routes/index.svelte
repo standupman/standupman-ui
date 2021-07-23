@@ -1,5 +1,5 @@
 <style>
-    @import '../../static/css/styles.css';
+    @import '../../static/css/landing.css';
 </style>
 
 <div class="dashboard-landing-page">

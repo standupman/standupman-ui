@@ -1,5 +1,5 @@
 <style>
-    @import '../../static/css/styles.css';
+    @import '../../static/css/landing.css';
 </style>
 
 <main>
@@ -33,7 +33,7 @@
               <input type="submit" value="Login" class="u-margin-bottom-small">
             </form>
              <p class="u-padding-bottom-small">Forgot password? <a href="" class="text-primary">Click Here</a></p>
-              <p class="u-padding-bottom-small">Don't have an account? <a href="" class="text-primary">Register</a></p>
+              <p class="u-padding-bottom-small">Don't have an account? <a href="/register" class="text-primary">Register</a></p>
         </div>
     </section>
 </main>

@@ -1,4 +1,8 @@
-<section class="sidebar">
+<script>
+  export let hideSideBar = false;
+</script>
+
+<section class="sidebar" class:hide-sidebar="{hideSideBar}">
     <div class="logo-box">
       <img src="/logo.svg" class="logo" alt="site-logo" />
     </div>
@@ -50,7 +54,7 @@
         <p class="heading">Teams</p>
         <ul>
           <li>
-            <a class="icon-left" href=""
+            <a class="icon-left" href="/dashboard/teams"
               ><img
                 src="icons/icon-people.svg"
                 alt=""
@@ -58,7 +62,7 @@
             >
           </li>
           <li>
-            <a class="icon-left" href=""
+            <a class="icon-left" href="/dashboard/teams"
               ><img
                 src="icons/icon-teams.svg"
                 alt=""

@@ -1,5 +1,5 @@
 <style>
-    @import '../../static/css/styles.css';
+  @import '../../static/css/landing.css';
 </style>
 
 <main>
@@ -50,12 +50,12 @@
             class="u-margin-bottom-small"
           />
         </form>
-        <a href="" class="signin-with-google-link u-margin-bottom-large">
+        <a href="/" class="signin-with-google-link u-margin-bottom-large">
             <img src="/icons/icon-google.svg" alt="">
             <span>Or sign-in with google</span>
         </a>
         <p class="u-padding-bottom-small">
-          Already have an account? <a href="" class="text-primary">Sign in</a>
+          Already have an account? <a href="/login" class="text-primary">Sign in</a>
         </p>
       </div>
     </section>
