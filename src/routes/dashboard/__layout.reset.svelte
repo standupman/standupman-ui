@@ -70,7 +70,6 @@
 	<section class="main-dashboard-content" class:increase-width="{increaseContentSize}">
 		<slot />
 	</section>
-	<slot name="after-main-content" />
 </main>
 
 <style>

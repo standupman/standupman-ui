@@ -28,6 +28,7 @@
   --color-light-pink: #f9f4ff;
   --color-violet: #623d91;
   --color-light-violet: #fdf0ff;
+  --color-danger: #eb1414;
   --font-family: "Mulish", sans-serif;
 }
 
@@ -1801,7 +1802,6 @@ font-size: 23px;
   border-radius: 0 0 4px 4px;
   overflow-y: scroll;
   height: 45rem;
-  display: none;
   animation: fadeEffect 1s;
 }
 
@@ -1868,19 +1868,41 @@ font-size: 23px;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: 10000;
+  z-index: 1000;
   transition: all .2s;
-  display: flex;
-  top: -100vh;
+  display: none;
+  top: 0;
   align-items: center;
   justify-content: center;
 }
+
+.invite-member-modal.show {
+  display: block;
+}
+
+.invite-member-modal .close-modal button {
+  height: 40px;
+  width: 40px;
+  padding: 0.1rem;
+  font-size: 20px;
+  color: var(--color-white);
+  background-color: var(--color-danger);
+  border: 0.1rem solid var(--color-danger);
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+
+}
+
 
 .invite-member-modal form {
   width: 30%;
   background-color: var(--color-white);
   padding: 3rem;
   border-radius: 8px;
+  margin: 10% auto;
 }
 
 .invite-member-modal form p:first-of-type {

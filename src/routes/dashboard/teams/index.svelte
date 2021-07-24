@@ -1,20 +1,6 @@
 <script>
-	function openTab(evt, tabName) {
-		var i, tabContent, tabLinks;
-
-		tabContent = document.getElementsByClassName('tabs-content');
-		for (i = 0; i < tabContent.length; i++) {
-			tabContent[i].style.display = 'none';
-		}
-
-		tabLinks = document.getElementsByClassName('tabs-link');
-		for (i = 0; i < tabLinks.length; i++) {
-			tabLinks[i].className = tabLinks[i].className.replace(' active-item', '');
-		}
-
-		document.getElementById(tabName).style.display = 'block';
-		evt.currentTarget.className += ' active-item';
-	}
+    let activeTab = 0;
+    let showInviteModal = false;
 </script>
 
 <div class="breadcrumb">
@@ -49,10 +35,11 @@
 		</div>
 		<div class="teams-tab">
 			<div class="tabs-menu">
-				<p class="tabs-link" id="defaultOpen" onclick="openTab(event, 'members')">Members</p>
-				<p class="tabs-link" onclick="openTab(event, 'standups')">Standups</p>
+				<p class:active-item={ activeTab === 0 } on:click="{() => activeTab = 0 }"  class="tabs-link">Members</p>
+				<p class:active-item={ activeTab === 1 } on:click="{() => activeTab = 1 }" class="tabs-link" >Standups</p>
 			</div>
-			<div id="members" class="tabs-content">
+            {#if activeTab === 0}
+            <div id="members" class="tabs-content">
 				<div class="members-container">
 					<div class="member-item">
 						<div class="member-avatar">
@@ -100,10 +87,12 @@
 						</div>
 					</div>
 				</div>
-				<a href="#" id="add-member-btn" class="btn primary-btn icon-right u-margin-top-large"
+				<a on:click="{() => showInviteModal = true}" id="add-member-btn" class="btn primary-btn icon-right u-margin-top-large"
 					>Add New Member <i class="fas fa-plus" /></a
 				>
 			</div>
+            {/if}
+            {#if activeTab === 1}
 			<div id="standups" class="tabs-content">
 				<table class="standups-table">
 					<thead>
@@ -219,6 +208,45 @@
 					</tbody>
 				</table>
 			</div>
+            {/if}
 		</div>
 	</div>
 </section>
+
+<div class:show={showInviteModal} class="invite-member-modal">
+    <div class="close-modal">
+        <button on:click="{() => showInviteModal = false }" class="close-icon"><i class="fa fa-times"></i></button>
+    </div>
+    <form action="" class="invite-member-form">
+        <p class="text-primary u-padding-bottom-small">Invite a user to join the team</p>
+        <div class="form-group u-margin-bottom-small ">
+            <label for="select-team">Select a team</label>
+            <select name="select-team" id="">
+                <option value="Team 1">Team 1</option>
+                <option value="Team 2">Team 2</option>
+                <option value="Team 3">Team 3</option>
+                <option value="Team 4">Team 4</option>
+                <option value="Team 5">Team 5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="select-team">Enter email addresses</label>
+           <textarea name="" cols="30" rows="10">
+                
+           </textarea>
+        </div>
+        <p class="u-margin-bottom-small">
+            Your colleagues will received mail to enter this
+        </p> 
+        <div class="form-group">
+            <a href="" class="btn primary-btn icon-right">Send invitation <i class="fas fa-paper-plane"></i></a>
+        </div>
+    </form>
+     <div class="invite-sent-popup">
+        <span class="close-icon"><i class="fa fa-times"></i></span>
+        <p>Updated</p>
+        <p>An invitation has been sent to <span class="text-primary">nest@gmail.com</span></p>
+    </div>
+</div>
+
+
