@@ -9,10 +9,6 @@ export async function handle({ event, resolve }) {
 
 export function getSession({ locals }) {
 	return {
-		user: locals.user && {
-			username: locals.user.username,
-			email: locals.user.email,
-			fullname: locals.user.fullname,
-		}
+		user: locals.user
 	};
 }
