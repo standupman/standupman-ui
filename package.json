@@ -15,7 +15,11 @@
     "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0"
+    "svelte": "^3.42.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "cookie": "^0.5.0"
+  }
 }
