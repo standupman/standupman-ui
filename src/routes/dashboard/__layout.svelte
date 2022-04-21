@@ -12,7 +12,6 @@
 
 	function toggleUserDropdown() {
         hideUserDropdown = !hideUserDropdown;
-		console.log('clicked ...')
 	}
 </script>
 

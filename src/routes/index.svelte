@@ -1,7 +1,3 @@
-<style>
-    @import '../../static/css/landing.css';
-</style>
-
 <div class="dashboard-landing-page">
 	<div class="header">
 		<img src="/logo.svg" alt="" />
@@ -39,3 +35,6 @@
 	</footer>
 </div>
 
+<style>
+	@import '../../static/css/landing.css';
+</style>
