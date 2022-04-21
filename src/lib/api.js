@@ -1,4 +1,4 @@
-const base = 'http://localhost:5001';
+const base = import.meta.env.VITE_API_URL;
 
 async function send({ method, path, data, token }) {
 	const opts = { method, headers: {} };
