@@ -1,5 +1,5 @@
 <script>
-	import SideBar from './sidebar.svelte';
+	import SideBar from "./sidebar.svelte";
 
 	let hideSideBar = false;
 	let increaseContentSize = false;
@@ -8,6 +8,7 @@
 	function toggleSideBar() {
 		hideSideBar = !hideSideBar;
 		increaseContentSize = !increaseContentSize;
+		console.log(hideSideBar)
 	}
 
 	function toggleUserDropdown() {
@@ -18,12 +19,12 @@
 
 <main>
 	<!-- Sidebar -->
-	<SideBar hideSideBar="{hideSideBar}"/>
+	<SideBar hideSideBar={hideSideBar}/>
 
 	<!-- Header -->
 	<header class="dashboard-header" class:increase-width="{increaseContentSize}">
 		<div class="header-items-container header-items-container-1">
-			<p on:click={toggleSideBar} id="sidebar-toggle" class="sidebar-toggle-icon">
+			<p on:click={() => (toggleSideBar)} id="sidebar-toggle" class="sidebar-toggle-icon">
 				<span>&nbsp;</span>
 			</p>
 			<div class="form-group">
