@@ -1,0 +1,22 @@
+linter:
+  name: eslint
+  config:
+    # Specify ESLint rules here
+     root: true
+    parser: "@typescript-eslint/parser"
+    plugins:
+      - svelte3
+      - "@typescript-eslint"
+    extends:
+      - "eslint:recommended"
+      - "plugin:@typescript-eslint/recommended"
+      - "plugin:svelte3/recommended"
+    rules:
+      - no-console: error
+      - semi: error
+  code_compilation:
+  - name: compile
+    command: npm run build\n
+  unit_tests:\n
+  - name: run_tests\n
+    command: npm test\n

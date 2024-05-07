@@ -141,6 +141,25 @@ a {
 .u-vertical-align {
   vertical-align: center;
 }
+@media only screen and (max-width: 600px),screen and (max-width: 900px){
+  .icon-left{
+    display: flex;
+    justify-content: space-between;
+    margin-left: -20px;
+    font-size: 17px;
+    flex-direction: row;
+  }
+  .tabs-content{
+    width:110%;
+  }
+  .tabs-content .members-container{
+    display: flex;
+    flex-direction: column;
+  }
+.invite-member-modal .invite-member-form{
+    width:70%;
+  }
+}
 /* ============ End of Utilies =========== */
 
 /* ==== Start of Animations ========== */
@@ -190,6 +209,7 @@ select {
 }
 
 .form-submit-btn {
+  width:20%;
   border: 1px solid var(--color-violet);
   color: var(--color-violet);
   background: rgba(98, 61, 145, 0.2);
@@ -232,6 +252,22 @@ select {
 
 .form-group-row > div {
   width: 49%;
+}
+@media only screen and (max-width: 600px),screen and (max-width: 900px) {
+  #search{
+    width:200%;
+  }
+  .pagination{
+    display: flex;
+  }
+.header-btns {
+   width:60%;
+   padding-right: -60px;
+  }
+ .header-btns .btn .secondary-btn{
+    margin-top: 20px;
+  }
+
 }
 /* ================= End of General Form Styles ============== */
 
@@ -315,7 +351,7 @@ main {
 /* Breadcrumb */
 .breadcrumb {
   display: flex;
-  width: 97%;
+  width: 90%;
   margin: 0 auto;
   align-items: center;
 }
@@ -519,7 +555,7 @@ header {
   top: 0.8rem;
 }
 
-.header-items-container-1 .form-group {
+.header-items-container-1 .group {
   width: 50%;
   position: relative;
 }
@@ -607,7 +643,7 @@ header {
 /* =============== All Standups Page Styles ========== */
 .all-standups-container {
   background-color: var(--color-white);
-  width: 97%;
+  width: 95%;
   margin: 3rem auto 5rem auto;
   border-radius: 20px 20px 0 0;
 }
@@ -638,6 +674,12 @@ header {
 
 .all-standups-container .table-header form .form-group {
   width: 65%;
+}
+.all-standups-container .table-header form .form-group .search-icon-Allstandups{
+  width:18px;
+  position: absolute;
+  right: 10%;
+  top:23%;
 }
 
 .all-standups-container .table-header form input {
@@ -812,7 +854,29 @@ header {
 .schedule .schedule-inputs-container .form-group {
   width: 33%;
 }
-
+@media only screen and (max-width: 600px),screen and (max-width: 900px) {
+  .new-standup{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .standup-form{
+    margin-left: -90px;
+  }
+  #name,#description{
+  width:140%;
+ }
+ #schedule{
+ width:80%;
+ }
+ .questions-and-new-question-form-container{
+  width:120%;
+ }
+ .questions-container{
+  width:115%;
+  margin-left: -23px;
+ }
+}
 /*Start Questions and Add Question Form Section */
 .questions-and-new-question-form-container {
   padding: 4rem;
@@ -1403,12 +1467,17 @@ header {
 .update-profile-picture-container a i {
   font-size: 50px;
 }
-
+@media only screen and(max-width:600px) {
+.update-profile-details-form .form-group #update{
+  width: 60%;
+  }
+}
 /* ============== Start of  Dashboard Home Page Styles =========== */
 /* Welcome message */
 .welcome-message-container {
-  width: 97%;
+  width: 100%;
   margin: 0 auto;
+  padding-left: 60px;
   /* padding-bottom: 3rem; */
 }
 
@@ -1440,20 +1509,20 @@ header {
 }
 
 .page-links-container {
-  width: 55%;
+  width: 60%;
 }
 
 .page-link-card-row {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  width: 100%;
+  width: 90%;
 }
 .page-link-card-row:not(:last-of-type) {
   margin-bottom: 3rem;
 }
 .page-link-card {
-  width: 48%;
+  width: 45%;
   background-color: var(--color-green);
   padding: 2rem;
   font-size: 25px;
@@ -1500,7 +1569,7 @@ header {
 }
 
 .some-stats-container {
-  width: 40%;
+  width: 50%;
   background-color: var(--color-white);
   padding: 2rem 3rem;
   border-radius: 16px;
@@ -1534,6 +1603,42 @@ header {
   padding-top: 2rem;
 }
 
+@media only screen and (max-width: 600px){
+
+  .page-links-and-stats-section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page-link-card-row{
+    width: 120%;
+  }
+  .create-standup-link-card, .my-standups-link-card{
+    width: 80%;
+    margin-left: -10px;
+    margin-right: 17px;
+    font-size:20px;
+  }
+  .all-standups-link-card,.my-profile-link-card{
+    width: 80%;
+    font-size: 20px;
+  }
+  .settings-link-card{
+    margin-bottom: 20px;
+  }
+  .some-stats-container{
+    margin-left: -20px;
+    width:90%;
+    padding-right: 30px;
+  }
+ .barchart{
+ width: 110%;
+ }
+  #chevron{
+    width:60%;
+   
+  }
+}
 /* Progress Rings Styles */
 .filled-progress-circle,
 .created-progress-circle {

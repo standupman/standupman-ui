@@ -15,20 +15,20 @@
     <form class="standup-form">
       <div class="form-group u-margin-bottom-small">
         <label for="name">Name</label>
-        <input type="text" placeholder="Enter Standup name Here" />
+        <input id="name" type="text" placeholder="Enter Standup name Here" />
       </div>
       <div class="form-group">
         <label for="description">Description</label>
         <textarea
           name="description"
-          id=""
+          id="description"
           cols="30"
           rows="10"
           placeholder="Enter Description name Here"
         ></textarea>
       </div>
     </form>
-    <div class="schedule">
+    <div id="schedule" class="schedule">
       <p>Schedule</p>
       <div class="schedule-inputs-container">
         <div class="form-group">

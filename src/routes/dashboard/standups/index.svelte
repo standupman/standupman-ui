@@ -13,7 +13,7 @@
       <form action="">
         <div class="form-group">
           <input type="text" placeholder="Search customer" />
-          <img src="/icons/icon-search.svg" alt="" />
+          <img src="/icons/icon-search.svg" class="search-icon-Allstandups" alt="" />
         </div>
         <select name="" id="">
           <option value="">All Frequency</option>

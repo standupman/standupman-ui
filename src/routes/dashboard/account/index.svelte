@@ -133,12 +133,12 @@
                   Your activity in the past 7 days
                 </p>
                 <div class="header-btns">
-                    <a href="" class="btn primary-btn">Invite others</a>
+                    <a href="" id="primary-btn" class="btn primary-btn">Invite others</a>
                     <a href="" class="btn secondary-btn">View activity</a>
                 </div>
             </div>
             <div class="past-activities-container">
-                <div class="activity tasks-completed">
+                <div id="tasks-completed" class="activity tasks-completed">
                     <div class="cta-icons">
                         <a href="">
                             <img src="/icons/icon-plus-black.svg" alt="">
