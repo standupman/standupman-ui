@@ -10,7 +10,7 @@
 
 <div class="all-standups-container reports-container">
   <div class="header">
-    <p>Report</p>
+    <p>Reports</p>
   </div>
 
   <div class="question-reported">
@@ -27,7 +27,7 @@
   <div class="table-header">
     <form action="">
       <div class="form-group">
-        <input type="text" placeholder="Search by name" />
+        <input type="text" id="search" placeholder="Search by name" />
        <i class="fas fa-search"></i>
       </div>
     </form>

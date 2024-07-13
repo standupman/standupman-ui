@@ -9,14 +9,14 @@
 	<section class="main-content">
 		<div class="text-container">
 			<p>Our design</p>
-			<p>Don’t Hesitate, <br /> Join us NOW!!!</p>
+			<p class="text-container para">Don’t Hesitate, <br /> Join us NOW!!!</p>
 			<div class="cta-btns">
-				<div>
-					<a href="/dashboard" class="btn primary-btn">Get Started</a>
-					<a href="/login" class="btn btn-outline-primary">Log in</a>
+				<div class="login">
+					<a href="/dashboard" id="primary-btn" class="btn primary-btn">Get Started</a>
+					<a href="/login" id="outline-primary-btn" class="btn btn-outline-primary">Log in</a>
 				</div>
 				<p>Or</p>
-				<a href="/register" class="btn signup-with-google-btn icon-left"
+				<a href="/register" id="google-btn" class="btn signup-with-google-btn icon-left"
 					><img src="/icons/icon-google.svg" alt="" />or Sign in with Google</a
 				>
 			</div>

@@ -60,7 +60,7 @@
 		</div>
 
 		<div class="user-details-dropdown-cta-btns">
-			<a href="/dashboard/" class="btn secondary-btn icon-left"><i class="fas fa-cog" /> Settings</a
+			<a href="/dashboard/" class="btn secondary-btn icon-left" id="setting"><i class="fas fa-cog" /> Settings</a
 			>
 			<a href="#" class="btn btn-danger icon-left"><i class="fas fa-sign-out-alt" /> Logout</a>
 		</div>

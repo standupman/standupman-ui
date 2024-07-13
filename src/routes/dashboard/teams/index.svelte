@@ -231,9 +231,9 @@
         </div>
         <div class="form-group">
             <label for="select-team">Enter email addresses</label>
-           <textarea name="" cols="30" rows="10">
-                
-           </textarea>
+          <!----<textarea name="" cols="30" rows="10" class="invite-member-modal email-input">  
+           </textarea>--->
+		   <input type="email" name="" placeholder="Email Adress"required/>
         </div>
         <p class="u-margin-bottom-small">
             Your colleagues will received mail to enter this

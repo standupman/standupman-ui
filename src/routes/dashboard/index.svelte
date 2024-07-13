@@ -92,6 +92,7 @@
             <p class="text-primary icon-right">
               This Week
               <img
+                id="chevron"
                 src="icons/icon-chevron-down.svg"
                 alt=""
               />
@@ -99,7 +100,7 @@
           </div>
           <div class="body">
             <div>
-              <img src="barchart.svg" alt="" />
+              <img src="barchart.svg" class="barchart" alt="" />
             </div>
           </div>
         </div>
